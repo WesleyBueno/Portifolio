@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Portifolio</a>
+        <div class="toggle"></div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Testimonial</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </header>
+
+    <section class="banner">
+            <div class="textBx">
+                <h2>Hello, I'm<br> <span>Wesley Bueno.</span></h2>
+                <h3>I'am a Front end developer and UX/UI design.</h3>
+                <a href="#" class="btn">About Me</a>
+            </div>
+    </section>
+
+    <section class="about">
+        <div class="heading">
+            <h2>About Me</h2>
+        </div>
+        <div class="content">
+            <div class="contentBx w50">
+                <h3>I'am a Front end developer and UX/UI design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, ex doloribus, dolores aut placeat sapiente in error eaque, sequi consectetur nihil? Explicabo atque voluptate dignissimos, in illum asperiores perferendis dolorem.</p>
+            </div>
+            <div class="w50">
+                <img src="img1.jpg" class="img">
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="heading white">
+            <h2>Our Services</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="content">
+            <div class="servicesBx">
+                <img src="icon1.png">
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="icon2.png">
+                <h2>Web Developer</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="icon3.png">
+                <h2>Android App</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="icon4.png">
+                <h2>Photography</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="icon5.png">
+                <h2>Content Writing</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="servicesBx">
+                <img src="icon6.png">
+                <h2>Video Editing</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="work">
+        <div class="heading">
+            <h2>Our Latest Work</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="content">
+            <div class="workBx">
+                <img src="product1.jpg">
+            </div>
+            <div class="workBx">
+                <img src="product2.jpg">
+            </div>
+            <div class="workBx">
+                <img src="product3.jpg">
+            </div>
+            <div class="workBx">
+                <img src="product4.jpg">
+            </div>
+        </div>
+        <div class="heading">
+            <a href="#" class="btn">View More</a>
+        </div>
+    </section>
+
+    <section class="Testimonial">
+        <div class="heading">
+            <h2>Our Latest Work</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+    </section>
+    
+    <script type="text/javascript">
+    window.addEventListener('scroll', function(){
+        var header = document.querySelector('header');
+        header.classList.toggle('sticky' , window.scrollY > 0);
+    });
+    </script>
+
+</body>
+</html>
