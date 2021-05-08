@@ -15,7 +15,6 @@ section{
 .banner{
     position: relative;
     min-height: 100vh;
-    background: url(banner.jpg);
     background-size: cover;
     background-position: right;
     display: flex;
@@ -23,11 +22,22 @@ section{
     align-items: center;
 }
 
+.banner video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
 .banner h2,h3{
     font-size: 2em;
     color: #fff;
     font-weight: 400;
     line-height: 1.5em;
+
 }
 
 .banner h2 span{
@@ -115,6 +125,10 @@ font-weight: 600;
 font-size: 30px;
 }
 
+.about{
+    background: rgb(218, 218, 218);
+}
+
 .content{
     display: flex;
     justify-content: space-between;
@@ -127,14 +141,16 @@ font-size: 30px;
 .contentBx h3{
     font-size: 24px;
     margin-bottom: 10px;
+    color: #000;
 }
 
 .w50{
+    padding: 40px;
     min-width: 50%;
 }
 
 img{
-    max-width: 100%;
+    max-width: 60%;
 }
 
 .services{
@@ -154,16 +170,19 @@ img{
 
 .services .content .servicesBx{
     padding: 40px 20px;
-    background: #222;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    
     color: #fff;
     max-width: 340px;
     margin: 20px;
     text-align: center;
     transition: 0.5s;
+    
 }
 
 .services .content .servicesBx:hover{
-    background: rgb(38, 105, 252);
+    background: red;
 }
 
 .services .content .servicesBx img{
@@ -187,47 +206,10 @@ img{
     padding: 20px;
 }
 
-.work .content .workBx img{
+.work .content .workBx video{
     max-width: 100%;
 }
 
-.testimonial{
-    background: #f1f1f1;
-}
-
-.testimonial .content{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.testimonial .content .testimonialBx{
-    max-width: calc(50% - 40px);
-    padding: 60px 40px;
-    margin: 20px;
-    background: #2196f3;
-}
-
-.testimonial .content .testimonialBx p{
-    color: #fff;
-    font-style: italic;
-    font-size: 16px;
-    font-weight: 300;
-}
-
-.testimonial .content .testimonialBx h3{
-    margin-top: 40px;
-    text-align: end;
-    color: #fff;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1em;
-}
-
-.testimonial .content .testimonialBx h3 span{
-    font-size: 14px;
-    font-weight: 400;
-}
 
 .contact{
     background-color: #111;
@@ -240,12 +222,15 @@ img{
 
 .contactInfoBx{
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .contactInfoBx .box{
     position: relative;
     padding: 20px 0;
     display: flex;
+    margin: 0px 100px;
 }
 
 .contactInfoBx .box .icon{
@@ -273,11 +258,25 @@ img{
     margin-bottom: 0;
 }
 
+.contactInfoBx .box .text a{
+    color: #fff;
+    
+}
+
 .copyright{
     background: #000;
     color: #fff;
     text-align: center;
     padding: 10px;
+}
+
+::-webkit-scrollbar{
+	width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+	background: rgb(75, 75, 75);
+	border-radius: 6px;
 }
 
 /*Responsive*/
@@ -381,19 +380,16 @@ img{
         padding: 10px;
     }
 
-    .testimonial .content .testimonialBx{
-        max-width: calc(100% - 20px);
-        padding: 40px 20px;
-        margin: 10px;
-        background: #2196f3;
-    }
-
-    .testimonial .content .testimonialBx h3{
-        margin-top: 20px;
-    }
     .contactInfo{
         min-width: 40%;
         margin: 20px 0;
+    }
+
+    .contactInfoBx .box {
+        position: relative;
+        padding: 20px 0;
+        display: flex;
+        margin: 0px;
     }
 }
 
